@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe ToDoList, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "Can have a to do item" do
+    bar = ToDoItem.create(content: "this is content", to_do_list: subject)
+
+    expect(subject.to_do_items.first).to eq bar
+  end
 end
