@@ -7,4 +7,6 @@ describe ToDoList, :type => :model do
 
     expect(subject.to_do_items.first).to eq bar
   end
+
+  pending "Returns items in reverse date order" 
 end
