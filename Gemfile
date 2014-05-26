@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.1.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 
-gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 gem 'rspec-rails', '~> 3.0.0.beta', group: [:development, :test]
 
 
