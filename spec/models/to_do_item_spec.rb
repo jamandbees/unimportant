@@ -24,9 +24,19 @@ describe ToDoItem, :type => :model do
       subject.destroy
       expect(subject.deleted?).to be true
     end
+  end
+
+  context "When expiring a to do item" do
+    let(:unexpired_to_do_item) {FactoryGirl.create(:to_do_item)}  
+    let(:expired_to_do_item) {FactoryGirl.create(:to_do_item, created_at: DateTime.now - (10.days + 1.hour))}
 
     it "is not expired by default" do
-      expect(subject.expired?).to be false
+      expect(unexpired_to_do_item.expired?).to be false
     end
-  end  
+
+    it "expires after 10 days" do
+      expired_to_do_item.set_will_expire_at(DateTime.now - 1.hour)
+      expect(expired_to_do_item.expired?).to be true
+    end
+  end
 end
