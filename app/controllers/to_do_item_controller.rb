@@ -5,6 +5,6 @@ class ToDoItemController < ApplicationController
   end
   
   private def app_params
-    params.require(:to_do_item).permit(:content, :deleted?)
+    params.require(:to_do_item).permit(:content)
   end
 end
