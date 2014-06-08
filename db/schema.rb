@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526204124) do
+ActiveRecord::Schema.define(version: 20140608154449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,10 @@ ActiveRecord::Schema.define(version: 20140526204124) do
   create_table "to_do_lists", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "to_do_item"
   end
+
+  add_index "to_do_lists", ["to_do_item"], name: "index_to_do_lists_on_to_do_item", using: :btree
 
   create_table "users", force: true do |t|
     t.integer  "to_do_list_id"
