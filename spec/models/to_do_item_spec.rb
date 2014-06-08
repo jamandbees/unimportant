@@ -15,5 +15,14 @@ describe ToDoItem, :type => :model do
       subject.content = incorrect_content
       expect(subject).to be_invalid
     end
+
+    it "has a false deleted flag" do
+      expect(subject.deleted?).to be false
+    end
+
+    it "can set deleted" do
+      subject.destroy
+      expect(subject.deleted?).to be true
+    end
   end  
 end
