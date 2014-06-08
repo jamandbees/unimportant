@@ -19,5 +19,10 @@ describe ToDoItem, :type => :model do
     it "has a false deleted flag" do
       expect(subject.deleted?).to be false
     end
+
+    it "can set deleted" do
+      subject.destroy
+      expect(subject.deleted?).to be true
+    end
   end  
 end
