@@ -24,5 +24,9 @@ describe ToDoItem, :type => :model do
       subject.destroy
       expect(subject.deleted?).to be true
     end
+
+    it "is not expired by default" do
+      expect(subject.expired?).to be false
+    end
   end  
 end
