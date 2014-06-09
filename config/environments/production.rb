@@ -82,7 +82,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
+    :address   => 'smtp.sendgrid.net',
     :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
     :enable_starttls_auto => true, # detects and uses STARTTLS
     :user_name => ENV["SENDGRID_USERNAME"],
