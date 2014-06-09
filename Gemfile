@@ -33,3 +33,5 @@ gem 'rspec-rails', '~> 3.0.0', group: [:development, :test]
 
 gem 'factory_girl_rails'
 gem 'database_cleaner'
+
+gem 'mandrill-api'
