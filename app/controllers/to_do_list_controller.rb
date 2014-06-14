@@ -1,5 +1,7 @@
 class ToDoListController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
     @message = "Welcome!"
   end
