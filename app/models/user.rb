@@ -1,3 +1,3 @@
-class ToDoItem < ActiveRecord::Base
-  has_one :to_do_list
+class User < ActiveRecord::Base
+  
 end
