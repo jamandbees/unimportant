@@ -38,5 +38,13 @@ describe ToDoItem, :type => :model do
       expired_to_do_item.set_will_expire_at(DateTime.now - 1.hour)
       expect(expired_to_do_item.expired?).to be true
     end
+
+    it "can set will expire at on create" do
+      will_expire_at = DateTime.now - 5.hours
+      test_item = ToDoItem.create(content: "foo", will_expire_at: will_expire_at)
+      expect(test_item.will_expire_at).to eq will_expire_at
+      test_item.save
+      expect(test_item.will_expire_at).to eq will_expire_at
+    end
   end
 end
