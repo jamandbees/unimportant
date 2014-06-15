@@ -32,4 +32,6 @@ gem 'database_cleaner'
 
 gem 'devise'
 
+#both gems needed for less support.
 gem 'less-rails'
+gem 'therubyracer'
