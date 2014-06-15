@@ -95,3 +95,5 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'importance.jamandbees.net' }
 end
+
+RUN_SEEDS = false
