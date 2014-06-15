@@ -33,4 +33,3 @@ gem 'database_cleaner'
 gem 'devise'
 
 gem 'less-rails'
-gem 'therubyracer', platforms: :ruby
