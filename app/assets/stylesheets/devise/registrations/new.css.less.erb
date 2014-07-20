@@ -3,15 +3,37 @@
 // You can use Less here: http://lesscss.org/
 //
 
-@nice-blue: #5B83AD;
+@white: #a0e5d5;
 
 html {
-
   background: url('<%= asset_path("forest_path.jpg") %>') no-repeat center center fixed;
   background-size: cover;
-  //background-repeat: no-repeat;
 }
 
 h2 {
-  color: @nice-blue;
+  color: @white;
+}
+
+#sign-up {
+  display: block;
+  width: 16em;
+  margin-left: auto;
+  margin-right: auto;
+  color: @white;
+  width: 18em;
+}
+
+#transparency {
+  background-color: grey;
+  border: 1px solid black;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+
+#sign-up input {
+  border-radius: 5px;
+  width: 25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
